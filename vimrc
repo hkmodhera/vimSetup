@@ -14,9 +14,9 @@ filetype plugin indent on 	    " required
 
 "" Colors / Themes ""
 
-" colorscheme [ name ]            " All color schemes are stored in ~/.vim/colors/
-"                                 " No color scheme means vim uses the same
-"                                   one as iterm2
+" colorscheme [ name ]          " All color schemes are stored in ~/.vim/colors/
+"                               " No color scheme means vim uses the same
+"                                 one as iterm2
 
 "" Basic Configurations ""
 
