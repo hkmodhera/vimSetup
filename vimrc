@@ -34,7 +34,7 @@ set backspace=indent,eol,start  " Makes backspace work similar to other programs
 
 set number                      " Displays line numbers
 set relativenumber              " Centers your cursor location to be line 0
-set showcmd		                " Shows the last command in bottom right corner
+set showcmd                     " Shows the last command in bottom right corner
 " set cursorline                " Highlights the line in which the cursor is on
 set wildmenu                    " Auto complete for filenames?
 set hidden                      " Allows you to switch between unsaved buffers/files
