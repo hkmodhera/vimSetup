@@ -5,7 +5,7 @@
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
- 
+Plugin 'VundleVim/Vundle.vim' 
 
 call vundle#end()               " required
 filetype plugin indent on       " required
@@ -34,8 +34,9 @@ set backspace=indent,eol,start  " Makes backspace work similar to other programs
 
 set number                      " Displays line numbers
 set relativenumber              " Centers your cursor location to be line 0
+set ruler                       " Meta info dispalyed at bottom right corner
 set showcmd                     " Shows the last command in bottom right corner
-" set cursorline                " Highlights the line in which the cursor is on
+set nocursorline                " Highlights the line in which the cursor is on
 set wildmenu                    " Auto complete for filenames?
 set hidden                      " Allows you to switch between unsaved buffers/files
 
@@ -43,7 +44,8 @@ set hidden                      " Allows you to switch between unsaved buffers/f
 
 set showmatch                   " Highlights matching parentheses/brackets
 set incsearch                   " Search as the characters are entered
-set hlsearch                    " Highlight searched matches
+set hlsearch                    " Highlight searched matches corner
+set ignorecase                  " Ignores the case when searching
 
 "" Key Mappings ""
 
