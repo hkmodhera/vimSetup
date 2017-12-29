@@ -9,6 +9,8 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' 
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()               " required
 filetype plugin indent on       " required
