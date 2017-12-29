@@ -59,5 +59,5 @@ set ignorecase                  " Ignores the case when searching
 " map = recursive   noremap = non-recursive
 " i,n,v infront of above keywords specify the mode
 
-nnoremap <space> za             " Toggle the fold at the cursor; 
+nnoremap <space> za             " Toggle the fold at the cursor 
 
