@@ -1,3 +1,6 @@
+" Author: Harsh Modhera
+" Github: hkmodhera
+
 "" Plugin Manager ""
 
 " All plugins go between vundle begin/end "
@@ -40,6 +43,10 @@ set nocursorline                " Highlights the line in which the cursor is on
 set wildmenu                    " Auto complete for filenames?
 set hidden                      " Allows you to switch between unsaved buffers/files
 
+" Saves and restores folds upon exiting/opening files "
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview    
+
 " Searching "
 
 set showmatch                   " Highlights matching parentheses/brackets
@@ -49,5 +56,8 @@ set ignorecase                  " Ignores the case when searching
 
 "" Key Mappings ""
 
+" map = recursive   noremap = non-recursive
+" i,n,v infront of above keywords specify the mode
 
+nnoremap <space> za             " Toggle the fold at the cursor; 
 
