@@ -67,3 +67,8 @@ set ignorecase                  " Ignores the case when searching
 nnoremap <space> za             " Toggle the fold at the cursor 
 nnoremap <leader>nt :NERDTree   " Open the nerdtree file explorer
 
+"" Miscellaneous ""
+
+" if nerdtree is last open buffer, close vim entirely "
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
