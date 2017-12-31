@@ -8,10 +8,11 @@
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim' 
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
+Plugin 'VundleVim/Vundle.vim' 
 
 call vundle#end()               " required
 filetype plugin indent on       " required
@@ -69,6 +70,8 @@ nnoremap <leader>nt :NERDTree   " Open the nerdtree file explorer
 
 "" Miscellaneous ""
 
+" Nerdtree Plugin "
+
 " Automatically opens nerdtree if vim is opened with no arguments "
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -78,4 +81,23 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Close nerdtree when you open a file "
 let NERDTreeQuitOnOpen=1
+
+" Show hidden files in nerdtree "
+" let NERDTreeShowHidden=1      " You can toggle hidden files with <shift-i>
+"                                 so this is not necessary
+
+" Nerdtree Git Plugin "
+
+let g:NERDTreeIndicatorMapCustom = {
+	\ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
 

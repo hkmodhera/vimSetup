@@ -19,7 +19,7 @@ setlocal backupcopy=
 setlocal nobinary
 setlocal nobreakindent
 setlocal breakindentopt=
-setlocal bufhidden=
+setlocal bufhidden=wipe
 setlocal buflisted
 setlocal buftype=
 setlocal nocindent
@@ -52,7 +52,7 @@ setlocal foldcolumn=0
 setlocal foldenable
 setlocal foldexpr=0
 setlocal foldignore=#
-setlocal foldlevel=2
+setlocal foldlevel=0
 setlocal foldmarker={{{,}}}
 setlocal foldmethod=manual
 setlocal foldminlines=1
@@ -124,36 +124,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-4,18fold
-22,26fold
-32,38fold
-40,52fold
-54,59fold
-61,69fold
-28,69fold
-73,87fold
-89,102fold
-71,102fold
-4
-normal! zc
-22
-normal! zc
-28
-normal! zo
-32
-normal! zc
-40
-normal! zc
-54
-normal! zc
-71
-normal! zo
-let s:l = 94 - ((72 * winheight(0) + 30) / 60)
+let s:l = 70 - ((42 * winheight(0) + 30) / 61)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-94
-normal! 020|
+70
+normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :
