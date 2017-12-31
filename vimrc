@@ -47,8 +47,8 @@ set wildmenu                    " Auto complete for filenames?
 set hidden                      " Allows you to switch between unsaved buffers/files
 
 " Saves and restores folds upon exiting/opening files "
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview    
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview    
 
 " Searching "
 
@@ -69,6 +69,13 @@ nnoremap <leader>nt :NERDTree   " Open the nerdtree file explorer
 
 "" Miscellaneous ""
 
-" if nerdtree is last open buffer, close vim entirely "
+" Automatically opens nerdtree if vim is opened with no arguments "
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" If nerdtree is last open buffer, close vim entirely "
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Close nerdtree when you open a file "
+let NERDTreeQuitOnOpen=1
 
