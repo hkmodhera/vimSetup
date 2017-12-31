@@ -86,6 +86,10 @@ let NERDTreeQuitOnOpen=1
 " let NERDTreeShowHidden=1      " You can toggle hidden files with <shift-i>
 "                                 so this is not necessary
 
+" Make nerdtree UI look nicer "
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
 " Nerdtree Git Plugin "
 
 let g:NERDTreeIndicatorMapCustom = {
