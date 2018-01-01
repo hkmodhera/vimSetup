@@ -70,6 +70,32 @@ nnoremap <leader>nt :NERDTree   " Open the nerdtree file explorer
 
 "" Miscellaneous ""
 
+" Document Editing "
+
+" ]s is next misspelled word
+" [s is prev misspelled word
+" zg is to add a word to spellfile
+" z= is to see suggestions for misspelled word
+
+" Set the spell file to store personal dictionary "
+set spellfile=~/.vim/spell/en.utf-8.add
+
+" Turn on spell check in specific files "
+"   had to run command locally once for each file type
+"   and then for every file afterwards of same type, 
+"   spell check worked becuase of the of following lines
+autocmd FileType markdown :setlocal spell spelllang=en_us
+autocmd FileType text :setlocal spell spelllang=en_us
+
+" Change highlight color of misspelled words "
+highlight SpellBad      ctermfg=black ctermbg=yellow
+highlight SpellCap      ctermfg=black ctermbg=cyan
+highlight SpellLocal    ctermfg=black ctermbg=magenta
+highlight SpellRare     ctermfg=black ctermbg=red
+
+" Turn on auto complete spellchecked files "
+set complete+=kspell
+
 " Nerdtree Plugin "
 
 " Automatically opens nerdtree if vim is opened with no arguments "
