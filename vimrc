@@ -87,6 +87,10 @@ set spellfile=~/.vim/spell/en.utf-8.add
 autocmd FileType markdown :setlocal spell spelllang=en_us
 autocmd FileType text :setlocal spell spelllang=en_us
 
+" Set textwidth to 80 in specific files
+autocmd FileType markdown :setlocal textwidth=80
+autocmd FileType text :setlocal textwidth=80
+
 " Change highlight color of misspelled words "
 highlight SpellBad      ctermfg=black ctermbg=yellow
 highlight SpellCap      ctermfg=black ctermbg=cyan
