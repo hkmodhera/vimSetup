@@ -35,6 +35,7 @@ syntax enable                   " Enable syntax highlighting
 set tabstop=4                   " Number of spaces given to <TAB> when file is loaded
 set softtabstop=4               " Number of spaces given to <TAB> when editing
 set expandtab                   " Converts tabs to spaces (4 spaces to be exact)
+set shiftwidth=4                " Number of spaces given to indenting using v - j/k - >/<
 set autoindent                  " Auto indent
 set backspace=indent,eol,start  " Makes backspace work similar to other programs
 
