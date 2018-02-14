@@ -13,7 +13,6 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'VundleVim/Vundle.vim' 
-Plugin 'wesQ3/vim-windowswap'
 
 call vundle#end()               " required
 filetype plugin indent on       " required
