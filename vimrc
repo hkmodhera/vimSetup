@@ -1,5 +1,7 @@
 " Author: Harsh Modhera
 " Github: hkmodhera
+" Version: 1.0.0
+" Last Modified: 10/31/18
 
 "" Plugin Manager ""
 
@@ -8,10 +10,14 @@
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
+Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'VundleVim/Vundle.vim' 
 
 call vundle#end()               " required
@@ -40,6 +46,7 @@ set backspace=indent,eol,start  " Makes backspace work similar to other programs
 
 " Navigation "
 
+set noshowmode                  " Hides the vim's mode -- already present in vim-airline plugin
 set number                      " Displays line numbers
 set relativenumber              " Centers your cursor location to be line 0
 set ruler                       " Meta info dispalyed at bottom right corner
@@ -59,6 +66,21 @@ set incsearch                   " Search as the characters are entered
 set hlsearch                    " Highlight searched matches corner
 set ignorecase                  " Ignores the case when searching
 
+set tags=tags;/
+let g:tagbar_type_typescript = {
+  \ 'ctagstype': 'typescript',
+  \ 'kinds': [
+    \ 'c:classes',
+    \ 'n:modules',
+    \ 'f:functions',
+    \ 'v:variables',
+    \ 'v:varlambdas',
+    \ 'm:members',
+    \ 'i:interfaces',
+    \ 'e:enums',
+  \ ]
+\ }
+
 "" Key Mappings ""
 
 " map = recursive   noremap = non-recursive
@@ -66,8 +88,11 @@ set ignorecase                  " Ignores the case when searching
 
 :let mapleader = ","
 
+inoremap jk <Esc>               " Remapping for work computer (touch bar)
+vnoremap jk <Esc>               
 nnoremap <space> za             " Toggle the fold at the cursor 
 nnoremap <leader>nt :NERDTree   " Open the nerdtree file explorer
+nnoremap <leader>vg :vimgrep "\b<C-R><C-W>\b" 
 
 "" Miscellaneous ""
 
@@ -100,6 +125,14 @@ highlight SpellRare     ctermfg=black ctermbg=red
 
 " Turn on auto complete spellchecked files "
 set complete+=kspell
+
+" Vim Airline Plugin "
+
+let g:airline_theme='minimalist'
+
+" Commentary Plugin "
+
+autocmd FileType apache setlocal commentstring=#\ %s
 
 " Nerdtree Plugin "
 
