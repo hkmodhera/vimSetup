@@ -92,7 +92,7 @@ inoremap jk <Esc>               " Remapping for work computer (touch bar)
 vnoremap jk <Esc>               
 nnoremap <space> za             " Toggle the fold at the cursor 
 nnoremap <leader>nt :NERDTree   " Open the nerdtree file explorer
-nnoremap <leader>vg :vimgrep "\b<C-R><C-W>\b" 
+nnoremap <leader>vg :vimgrep /<C-R><C-W>/gj ./**/*<CR>:cw<CR>
 
 "" Miscellaneous ""
 
