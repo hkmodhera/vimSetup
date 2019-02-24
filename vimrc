@@ -153,6 +153,7 @@ let NERDTreeQuitOnOpen=1
 " Make nerdtree UI look nicer "
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " Nerdtree Git Plugin "
 
